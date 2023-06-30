@@ -1,5 +1,11 @@
 import client from 'prom-client'
 import express from 'express';
+import elk_apm from 'elastic-apm-node';
+
+const apm = elk_apm.start({
+	serviceName: 'demo',
+	serverUrl: 'http://127.0.0.1:8200',
+})
 
 var app = express();
 const collectDefaultMetrics = client.collectDefaultMetrics
