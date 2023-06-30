@@ -4,7 +4,7 @@ import elk_apm from 'elastic-apm-node';
 
 const apm = elk_apm.start({
 	serviceName: 'template-node',
-	serverUrl: 'http://127.0.0.1:8200',
+	serverUrl: 'http://apm-server1.lab.liwsakilive.me:8200',
 })
 
 var app = express();
